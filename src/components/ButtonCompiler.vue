@@ -1,10 +1,11 @@
 <template>
+  <div class="tlab">{{ cmeaning }}</div>
   <div>
     <table>
-      <tbody>
+      <tbody> 
         <tr v-for="(group, index) in openingGroups" :key="index">
           <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
-            <button class="button1">{{ opening.name }}</button>
+            <button class="button1" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning">{{ opening.name }}</button>
           </td>
         </tr>
       </tbody>
@@ -18,6 +19,7 @@ import openings from '../../openings.json'
 export default {
   data() {
     return {
+      cmeaning: ' ',
       openings: openings.openings
     }
   },
@@ -53,5 +55,8 @@ export default {
   color: white;
   transition: 0.7s;
   border-radius: 12px;
+}
+.tlab {
+  color: aliceblue;
 }
 </style>
