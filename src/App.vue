@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import ButtonCompiler from "./components/ButtonCompiler.vue";
+import ButtonCompiler from './components/ButtonCompiler.vue'
 
 export default {
   components: {
     ButtonCompiler
+  }
 }
-};
 </script>
 <!--
 <style scoped>

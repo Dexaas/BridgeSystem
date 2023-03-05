@@ -1,36 +1,177 @@
 {
 	"openings": [
-	  {
+	{
+		"name": "1♣",
+		"meaning": "12-17 PC, 5+♣ / 12-17 PC, skład bez koloru pięciokartowego / 18+ PC, skład dowolny"
+	},
+	{
+		"name": "1♦",
+		"meaning": "5+ kar / układ 4441 bez singla karo / 4♦5♣"
+	},
+	{
+		"name": "1♥",
+		"meaning": "12-17 PC, 5+♥"
+	},
+	{
+		"name": "1♠",
+		"meaning": "12-17 PC, 5+♠"
+	},
+	{
 		"name": "1NT",
 		"meaning": "15-17PC, skład zrównoważony bez krótkości, bez starszej piątki",
-		"responses": [
-		  {
+		"response": [
+		{
 			"name": "2♣",
 			"meaning": "Stayman, obiecuje starszą czwórkę"
-		  },
-		  {
+		},
+		{
 			"name": "2♦",
 			"meaning": "teksas na kiery - 5+ kierów"
-		  },
-		  {
+		},
+		{
 			"name": "2♥",
 			"meaning": "teksas na piki - 5+ pików"
-		  },
-		  {
+		},
+		{
 			"name": "2♠",
 			"meaning": "teksas na trefle - 6+ trefli"
-		  },
-		  {
+		},
+		{
 			"name": "2NT",
 			"meaning": "8-9PC, inwit do 3BA"
-		  },
-		  {
+		},
+		{
 			"name": "2♣",
 			"meaning": "teksas na kara - 6+ kar"
-		  },
-		  {
+		},
+		{
 			"name": "3NT",
 			"meaning": "kontrakt, 10-15 PC, skład zrównoważony bez starszej czwórki"
-		  }
+		}
 		]
-	  }]}
+	},
+	{
+		"name": "2♣",
+		"meaning": ""
+	},
+	{
+		"name": "2♦",
+		"meaning": ""
+	},
+	{
+		"name": "2♥",
+		"meaning": ""
+	},
+	{
+		"name": "2♠",
+		"meaning": ""
+	},
+	{
+		"name": "2♠",
+		"meaning": ""
+	},
+	{
+		"name": "2NT",
+		"meaning": ""
+	},
+	{
+		"name": "3♣",
+		"meaning": ""
+	},
+	{
+		"name": "3♦",
+		"meaning": ""
+	},
+	{
+		"name": "3♥",
+		"meaning": ""
+	},
+	{
+		"name": "3♠",
+		"meaning": ""
+	},
+	{
+		"name": "3NT",
+		"meaning": ""
+	},
+	{
+		"name": "4♣",
+		"meaning": ""
+	},
+	{
+		"name": "4♦",
+		"meaning": ""
+	},
+	{
+		"name": "4♥",
+		"meaning": ""
+	},
+	{
+		"name": "4♠",
+		"meaning": ""
+	},
+	{
+		"name": "4NT",
+		"meaning": ""
+	},
+	{
+		"name": "5♣",
+		"meaning": ""
+	},
+	{
+		"name": "5♦",
+		"meaning": ""
+	},
+	{
+		"name": "5♥",
+		"meaning": ""
+	},
+	{
+		"name": "5♠",
+		"meaning": ""
+	},
+	{
+		"name": "5NT",
+		"meaning": ""
+	},
+	{
+		"name": "6♣",
+		"meaning": ""
+	},
+	{
+		"name": "6♦",
+		"meaning": ""
+	},
+	{
+		"name": "6♥",
+		"meaning": ""
+	},
+	{
+		"name": "6♠",
+		"meaning": ""
+	},
+	{
+		"name": "6NT",
+		"meaning": ""
+	},
+	{
+		"name": "7♣",
+		"meaning": ""
+	},
+	{
+		"name": "7♦",
+		"meaning": ""
+	},
+	{
+		"name": "7♥",
+		"meaning": ""
+	},
+	{
+		"name": "7♠",
+		"meaning": ""
+	},
+	{
+		"name": "7NT",
+		"meaning": ""
+	}
+]}
