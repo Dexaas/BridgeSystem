@@ -1,7 +1,6 @@
 <template>
-  <div class="tlab">{{ cmeaning }}</div>
   <div>
-    <table>
+    <table class="btntbl">
       <tbody> 
         <tr v-for="(group, index) in openingGroups" :key="index">
           <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
@@ -11,6 +10,7 @@
       </tbody>
     </table>
   </div>
+  <div class="tlab">{{ cmeaning }}</div>
 </template>
 
 <script>
@@ -40,9 +40,14 @@ export default {
 </script>
 
 <style>
+.btntbl{
+  margin-top: 10px;
+  margin-left: 10px;
+}
 .button1 {
   background-color: hsla(160, 100%, 37%, 0.2);
   color: aliceblue;
+  margin: 2px, 2px, 2px, 2px;
   height: 30px;
   width: 100px;
   cursor: pointer;
@@ -58,5 +63,11 @@ export default {
 }
 .tlab {
   color: aliceblue;
+  display: flex;
+  border-style: solid;
+  background-color: hsla(160, 100%, 37%, 0.2);
+  border: 5px;
+  border-color: hsla(0, 0%, 0%, 0.2);
+  margin-left: 10px;
 }
 </style>
