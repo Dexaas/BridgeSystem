@@ -2,8 +2,8 @@
   <div>
     <table>
       <tbody>
-        <tr>
-          <td v-for="(opening, openingIndex) in openings" :key="openingIndex">
+        <tr v-for="(group, index) in openingGroups" :key="index">
+          <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
             <button class="button1">{{ opening.name }}</button>
           </td>
         </tr>
@@ -18,11 +18,22 @@ import openings from '../../openings.json'
 export default {
   data() {
     return {
-      colors: ['♣', '♦', '♥', '♠', 'NT'],
       openings: openings.openings
     }
   },
-  methods: {}
+  computed: {
+    openingGroups() {
+      // Group the openings based on the first character in their name
+      const groups = []
+      for (let i = 1; i <= 7; i++) {
+        groups.push({
+          label: `${i}`,
+          openings: this.openings.filter(opening => opening.name.startsWith(`${i}`))
+        })
+      }
+      return groups
+    }
+  }
 }
 </script>
 
