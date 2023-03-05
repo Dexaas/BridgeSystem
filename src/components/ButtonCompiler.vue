@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="btn-div">
     <table>
       <tbody>
         <tr v-for="(group, index) in openingGroups" :key="index">
@@ -28,7 +28,7 @@ export default {
       for (let i = 1; i <= 7; i++) {
         groups.push({
           label: `${i}`,
-          openings: this.openings.filter(opening => opening.name.startsWith(`${i}`))
+          openings: this.openings.filter((opening) => opening.name.startsWith(`${i}`))
         })
       }
       return groups
@@ -38,15 +38,22 @@ export default {
 </script>
 
 <style>
+.btn-div {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 .button1 {
   background-color: hsla(160, 100%, 37%, 0.2);
   color: aliceblue;
-  height: 30px;
+  height: 35px;
   width: 100px;
   cursor: pointer;
   text-align: center;
   border: none;
   border-radius: 6px;
+  margin-block: 2px;
+  margin-inline: 2px;
 }
 .button1:hover {
   background-color: hsla(160, 100%, 37%, 1);
