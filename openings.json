@@ -1,0 +1,36 @@
+{
+	"openings": [
+	  {
+		"name": "1NT",
+		"meaning": "15-17PC, skład zrównoważony bez krótkości, bez starszej piątki",
+		"responses": [
+		  {
+			"name": "2♣",
+			"meaning": "Stayman, obiecuje starszą czwórkę"
+		  },
+		  {
+			"name": "2♦",
+			"meaning": "teksas na kiery - 5+ kierów"
+		  },
+		  {
+			"name": "2♥",
+			"meaning": "teksas na piki - 5+ pików"
+		  },
+		  {
+			"name": "2♠",
+			"meaning": "teksas na trefle - 6+ trefli"
+		  },
+		  {
+			"name": "2NT",
+			"meaning": "8-9PC, inwit do 3BA"
+		  },
+		  {
+			"name": "2♣",
+			"meaning": "teksas na kara - 6+ kar"
+		  },
+		  {
+			"name": "3NT",
+			"meaning": "kontrakt, 10-15 PC, skład zrównoważony bez starszej czwórki"
+		  }
+		]
+	  }]}
