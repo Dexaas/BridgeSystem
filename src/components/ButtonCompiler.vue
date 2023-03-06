@@ -4,47 +4,49 @@
       <tbody> 
         <tr v-for="(group, index) in openingGroups" :key="index">
           <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
-            <button class="button1" @click="setName(opening.name, openingIndex)" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning">{{ opening.name }}</button>
+            <button class="button1" @click="  setName(opening.name)" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning">{{ opening.name }}</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="tlab">{{ cmeaning }}</div>
-  <div class="tlab">{{ clicked }}</div>
-  <div class="tlab">{{ respond }}</div>
 </template>
 
 <script>
 import openings from '../../openings.json'
 
 export default {
-  data() {
-    return {
-      clicked: ' ',
-      respond: 'a',
-      cmeaning: ' ',
-      openings: openings.openings
-    }
-  },
-  computed: {
-    openingGroups() {
-      // Group the openings based on the first character in their name
-      const groups = []
-      for (let i = 1; i <= 7; i++) {
-        groups.push({
-          label: `${i}`,
-          openings: this.openings.filter((opening) => opening.name.startsWith(`${i}`))
-        })
-      }
-      return groups
-    }  
-  },
-  methods:{
-    setName(name, index) { 
-      this.clicked = name
-    }
-  }
+    data() {
+        return {
+            clicked: " ",
+            respond: " ",
+            cmeaning: "meaning",
+            openings: openings.openings
+        };
+    },
+    emits: {
+        benz: null
+    },
+    computed: {
+        openingGroups() {
+            // Group the openings based on the first character in their name
+            const groups = [];
+            for (let i = 1; i <= 7; i++) {
+                groups.push({
+                    label: `${i}`,
+                    openings: this.openings.filter((opening) => opening.name.startsWith(`${i}`))
+                });
+            }
+            return groups;
+        }
+    },
+    methods: {
+        setName(name) {
+            this.clicked = name;
+            this.$emit("benz", this.clicked);
+        },
+    },
 }
 </script>
 
