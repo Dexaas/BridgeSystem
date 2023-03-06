@@ -4,13 +4,15 @@
       <tbody> 
         <tr v-for="(group, index) in openingGroups" :key="index">
           <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
-            <button class="button1" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning">{{ opening.name }}</button>
+            <button class="button1" @click="setName(opening.name, openingIndex)" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning">{{ opening.name }}</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="tlab">{{ cmeaning }}</div>
+  <div class="tlab">{{ clicked }}</div>
+  <div class="tlab">{{ respond }}</div>
 </template>
 
 <script>
@@ -19,6 +21,8 @@ import openings from '../../openings.json'
 export default {
   data() {
     return {
+      clicked: ' ',
+      respond: 'a',
       cmeaning: ' ',
       openings: openings.openings
     }
@@ -34,6 +38,11 @@ export default {
         })
       }
       return groups
+    }  
+  },
+  methods:{
+    setName(name, index) { 
+      this.clicked = name
     }
   }
 }
@@ -64,12 +73,12 @@ export default {
 }
 .tlab {
   color: aliceblue;
-  display: flex;
-  border-style: solid;
   background-color: hsla(160, 100%, 37%, 0.2);
   border: 5px;
   border-color: hsla(0, 0%, 0%, 0.2);
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
+  height: auto;
+  width: 532px;
 }
 </style>
