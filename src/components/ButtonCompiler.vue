@@ -4,7 +4,7 @@
       <tbody> 
         <tr v-for="(group, index) in openingGroups" :key="index">
           <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
-            <button class="button1" @click="  setName(opening.name)" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning">{{ opening.name }}</button>
+            <button class="button1" @click="  setName(opening.name)" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning" @mouseleave="this.cmeaning='openingMeaning'">{{ opening.name }}</button>
           </td>
         </tr>
       </tbody>
@@ -20,8 +20,7 @@ export default {
     data() {
         return {
             clicked: " ",
-            respond: " ",
-            cmeaning: "meaning",
+            cmeaning: "openingMeaning",
             openings: openings.openings
         };
     },

@@ -14,12 +14,18 @@
 	},
 	{
 		"name": "1♠",
-		"meaning": "12-17 PC, 5+♠"
+		"meaning": "12-17 PC, 5+♠",
+		"responses": [
+			{
+				"name": "2♣",
+				"meaning": "teksas na kiery - 5+ kierów"
+			}
+		]
 	},
 	{
 		"name": "1NT",
 		"meaning": "15-17PC, skład zrównoważony bez krótkości, bez starszej piątki",
-		"response": [
+		"responses": [
 		{
 			"name": "2♣",
 			"meaning": "Stayman, obiecuje starszą czwórkę"
