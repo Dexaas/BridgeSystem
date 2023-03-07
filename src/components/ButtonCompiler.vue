@@ -4,13 +4,15 @@
       <tbody> 
         <tr v-for="(group, index) in openingGroups" :key="index">
           <td v-for="(opening, openingIndex) in group.openings" :key="openingIndex">
-            <button class="button1" @click="  setName(opening.name)" @mouseover="cmeaning=opening.name + ' - ' + opening.meaning" @mouseleave="this.cmeaning='openingMeaning'">{{ opening.name }}</button>
+            <button class="button1" @click="  setName(opening.name, opening.meaning)" @mouseover="hoverName(opening.name, opening.meaning)">{{ opening.name }}</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="tlab">{{ cmeaning }}</div>
+  <div v-if="meaningHover" class="tlab">{{ currentHoverMeaning }}</div>
+  <div v-if="meaningClick" class="tlab">{{ currentClickedMeaning }}</div>
+  
 </template>
 
 <script>
@@ -19,8 +21,11 @@ import openings from '../../openings.json'
 export default {
     data() {
         return {
-            clicked: " ",
-            cmeaning: "openingMeaning",
+            meaningHover: true,
+            meaningClick: false,
+            clicked: "",
+            currentClickedMeaning: 'ClickedMeaning',
+            currentHoverMeaning: "Tutaj pokaże się znaczenie otwarcia!",
             openings: openings.openings
         };
     },
@@ -41,8 +46,15 @@ export default {
         }
     },
     methods: {
-        setName(name) {
-            this.clicked = name;
+        hoverName(name, meaning){
+          this.clicked = name
+          this.currentHoverMeaning=name + ' ' + meaning
+            
+        },
+        setName(name, meaning) {
+            this.meaningHover=false
+            this.meaningClick=true
+            this.currentClickedMeaning=name + ' - ' + meaning
             this.$emit("benz", this.clicked);
         },
     },

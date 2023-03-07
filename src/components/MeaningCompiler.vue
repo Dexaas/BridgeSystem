@@ -1,7 +1,15 @@
 <template>
     <ButtonCompiler @benz="getClick"/>
-    <div class="tlab">{{ this.clickedName }}</div>
-    <div class="tlab">{{ this.cmeaning }}</div>
+    <table class="meaningLabel" >
+      <tbody>
+        <tr v-if="this.clickedName != ''">
+          Odpowiedzi do {{ this.clickedName }}
+        </tr>
+        <tr v-for="(answer, index) in answers" :key="index">
+          <div>{{answer.name + ' - ' + answer.meaning}}</div>
+        </tr>
+      </tbody>
+    </table>
   </template>
   
   <script>
@@ -14,25 +22,32 @@
     },
     data() {
       return {
-        cmeaning: 'responses',
-        clickedName: 'opening',
+        answers: [],
+        clickedName: '',
         openings: openings.openings
       }
     },
     updated() {
-    const response = this.openings.find(opening => opening.name === this.clickedName).responses.find(response => response.name === "2♣");
-    console.log(response.meaning);
-    this.cmeaning=response.name + "  " + response.meaning
+    this.answers= this.openings.find(opening => opening.name === this.clickedName).responses
+    console.log(this.answers)
     },
     methods: {
     getClick(value) {
       this.clickedName = value
-      console.log(this.clickedName)
    }
   }
   }
   </script>
   <style>
-
+.meaningLabel {
+  color: aliceblue;
+  background-color: hsla(160, 100%, 37%, 0.2);
+  border: 5px;
+  border-color: hsla(0, 0%, 0%, 0.2);
+  margin-top: 10px;
+  margin-left: 15px;
+  height: auto;
+  width: 40%;
+}
   </style>
   
