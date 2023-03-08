@@ -43,15 +43,12 @@
   }
   </script>
   <style>
-  .newlineStringStyle {
-       white-space: pre-wrap;
-     }
+.newlineStringStyle {
+  white-space: pre-wrap;
+}
 .meaningLabel {
   color: aliceblue;
   background-color: hsla(160, 100%, 37%, 0.2);
-  border-style: solid;
-  border: 5px;
-  border-color: hsl(0, 100%, 50%);
   margin-top: 10px;
   margin-left: 15px;
   height: auto;
@@ -61,14 +58,10 @@
   .meaningLabel {
   color: aliceblue;
   background-color: hsla(160, 100%, 37%, 0.2);
-  border-style: solid;
-  border: 2px;
-  border-color: hsl(0, 93%, 39%);
   margin-top: 10px;
   margin-left: 15px;
   height: auto;
   width: 130%;
-}
-}
+}}
   </style>
   
