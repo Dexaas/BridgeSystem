@@ -2,7 +2,46 @@
 	"openings": [
 	{
 		"name": "1♣",
-		"meaning": "12-17 PC, 5+♣ / 12-17 PC, skład bez koloru pięciokartowego / 18+ PC, skład dowolny"
+		"meaning": "12-14PC układ zrównoważony / 12-17PC układ 4-4-1♦-4 / 15+PC 5 ♣ (ale patrz 1NT) / 18+PC układ dowolny",
+		"responses": [
+			{
+				"name": "1♦",
+				"meaning": "0-6(7)PC /\n\t7-11PC 6♣+, bez starszej czwórki /\n\t7-11PC 6♦+ bez starszej czwórki /\n\t7-11PC 5♣+ 4♦+ lub 5♦+ 4♣+ /\n\t16+PC bez starszych czwórek i młodszych piątek"
+			},
+			{
+				"name": "1♥",
+				"meaning": "7PC+, 4+♥ *(4♥4♠)"
+			},
+			{
+				"name": "1♠",
+				"meaning": "7PC+, 4+♠ *(5♥+5♠+)"
+			},
+			{
+				"name": "1NT",
+				"meaning": "7-10PC układ zrównoważony"
+			},
+			{
+				"name": "2♣/♦",
+				"meaning": "12PC+ 5+♣/♦ nie wyklucza 4♥/♠"
+			},
+			{
+				"name": "2♥",
+				"meaning": "7-9 PC 4♥ i 5♠,  gramy 3NT przez partnera"
+			},
+			{
+				"name": "2♠",
+				"meaning": "11-12PC, gramy 2/3NT przez partnera"
+			},
+			{
+				"name": "2NT",
+				"meaning": "11-12PC bez 4♥/♠, inwit"
+			},
+			{
+				"name": "3NT",
+				"meaning": "12-16PC, bez 4♥/♠, propozycja kontraktu"
+			}
+			]
+		
 	},
 	{
 		"name": "1♦",
@@ -47,7 +86,7 @@
 			"meaning": "8-9PC, inwit do 3BA"
 		},
 		{
-			"name": "2♣",
+			"name": "3♣",
 			"meaning": "teksas na kara - 6+ kar"
 		},
 		{

@@ -48,7 +48,7 @@ export default {
     methods: {
         hoverName(name, meaning){
           this.clicked = name
-          this.currentHoverMeaning=name + ' ' + meaning
+          this.currentHoverMeaning=name + ' - ' + meaning
             
         },
         setName(name, meaning) {
@@ -92,6 +92,17 @@ export default {
   margin-top: 10px;
   margin-left: 15px;
   height: auto;
-  width: 532px;
+  width: 28%;
 }
+@media (max-width: 480px){
+  .tlab {
+  color: aliceblue;
+  background-color: hsla(160, 100%, 37%, 0.2);
+  border: 5px;
+  border-color: hsla(0, 0%, 0%, 0.2);
+  margin-top: 10px;
+  margin-left: 15px;
+  height: auto;
+  width: 130%;
+}}
 </style>
