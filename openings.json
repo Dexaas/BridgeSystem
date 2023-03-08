@@ -2,11 +2,37 @@
 	"openings": [
 	{
 		"name": "1♣",
-		"meaning": "12-14PC układ zrównoważony / 12-17PC układ 4-4-1♦-4 / 15+PC 5 ♣ (ale patrz 1NT) / 18+PC układ dowolny",
+		"meaning": "12-14PC układ zrównoważony / 12-17PC układ 4-4-1♦-4 / 15+PC 5♣ (ale patrz 1NT) / 18+PC układ dowolny",
 		"responses": [
 			{
 				"name": "1♦",
-				"meaning": "0-6(7)PC /\n\t7-11PC 6♣+, bez starszej czwórki /\n\t7-11PC 6♦+ bez starszej czwórki /\n\t7-11PC 5♣+ 4♦+ lub 5♦+ 4♣+ /\n\t16+PC bez starszych czwórek i młodszych piątek"
+				"meaning": "0-6(7)PC /\n\t7-11PC 6♣+, bez 4♥/♠ /\n\t7-11PC 6♦+ bez 4♥/♠ /\n\t7-11PC 5♣+ 4♦+ lub 5♦+ 4♣+ /\n\t16+PC bez 4♥/♠ i bez 5♣/♦",
+				"responses": [
+					{
+						"name": "1♥/♠",
+						"meaning": "12-14PC układ zrównoważony /\n\t12-17PC trójkolorówka"
+					},
+					{
+						"name": "1NT",
+						"meaning": "18-21PC układ zrównoważony"
+					},
+					{
+						"name": "2♣",
+						"meaning": "15-17PC 5♣+ nie forsuje"
+					},
+					{
+						"name": "2♦",
+						"meaning": "ACOL - końcówka z ręki"
+					},
+					{
+						"name": "2♥/♠",
+						"meaning": "18PC+ 5♥/♠"
+					},
+					{
+						"name": "2NT",
+						"meaning": "22-24PC układ zrównoważony"
+					}
+				]
 			},
 			{
 				"name": "1♥",

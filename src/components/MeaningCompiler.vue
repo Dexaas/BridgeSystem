@@ -6,7 +6,7 @@
           Odpowiedzi do {{ this.clickedName }}
         </tr>
         <tr v-for="(answer, index) in answers" :key="index">
-          <div @click="responsec(answer.name)" :class="meaningButton" >{{answer.name + ' - ' + answer.meaning}}</div>
+          <div @click="setRName(answer.name)" :class="meaningButton" >{{answer.name + ' - ' + answer.meaning}}</div>
         </tr>
       </tbody>
     </table>
@@ -17,13 +17,16 @@
   import ButtonCompiler from './ButtonCompiler.vue'
 
   export default {
+    emits: {
+        responseClicked: null
+    },
     components: {
       ButtonCompiler
     },
     data() {
       return {
         answers: [],
-        clickedName: '',
+        clickedName: '', 
         openings: openings.openings,
         meaningButton: "meaningButtons",
       }
@@ -33,9 +36,10 @@
     console.log(this.answers)
     },
     methods: {
-      responsec(name){
-        console.log(name + ' has been clicked')
-      },
+      setRName(name) {
+            this.clickedResponse=name
+            this.$emit("responseClicked", this.clickedResponse);
+        },
     getClick(value) {
       this.clickedName = value
    }

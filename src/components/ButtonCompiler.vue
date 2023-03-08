@@ -67,6 +67,7 @@ export default {
   margin-left: 10px;
 }
 .button1 {
+  font-size: 15px;
   background-color: hsla(160, 100%, 37%, 0.2);
   color: aliceblue;
   height: 35px;
