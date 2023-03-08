@@ -6,7 +6,7 @@
           Odpowiedzi do {{ this.clickedName }}
         </tr>
         <tr v-for="(answer, index) in answers" :key="index">
-          <div :class="newlineCSS">{{answer.name + ' - ' + answer.meaning}}</div>
+          <div @click="responsec(answer.name)" :class="meaningButton">{{answer.name + ' - ' + answer.meaning}}</div>
         </tr>
       </tbody>
     </table>
@@ -25,7 +25,7 @@
         answers: [],
         clickedName: '',
         openings: openings.openings,
-        newlineCSS: "newlineStringStyle",
+        meaningButton: "meaningButtons",
       }
     },
     updated() {
@@ -33,6 +33,9 @@
     console.log(this.answers)
     },
     methods: {
+      responsec(name){
+        console.log(name + ' has been clicked')
+      },
       replaceWithBr() {
   return this.answers.replace(/\n/g, "<br />")
 },
@@ -43,8 +46,19 @@
   }
   </script>
   <style>
-.newlineStringStyle {
+.meaningButtons {
   white-space: pre-wrap;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+  margin-block: 2px;
+  margin-inline: 2px;
+}
+.meaningButtons:hover {
+  background-color: hsla(160, 100%, 37%, 1);
+  color: white;
+  transition: 0.7s;
+  border-radius: 2px;
 }
 .meaningLabel {
   color: aliceblue;
