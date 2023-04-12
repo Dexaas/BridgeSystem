@@ -1,8 +1,8 @@
 <template>
-  <MeaningCompiler @responseClicked="getClick"/>
+  <MeaningCompiler @responseClicked="getClick" @answer="getName"/>
   <table class="meaningLabel" >
-    <tbody>
-      <div>{{ this.answers }}</div>
+    <tbody v-if="this.responds != ''">
+      <div>{{ this.responds }}</div>
     </tbody>
   </table>
 </template>
@@ -17,17 +17,21 @@ export default {
   },
   data() {
     return {
-      answers: [], 
+      responds: '', 
       openings: openings.openings,
       clickedResponse: '',
     }
+  },
+  updated(){
+     this.responds = 'Work in progress'//this.responds.find(responses => responses.name === this.clickedResponse).responses
   },
   methods: {
     getClick(value) {
       this.clickedResponse=value
       console.log(this.clickedResponse)
-      this.answers = this.openings.find(opening => opening.name.responses === this.clickedResponse).responses
-      console.log(this.answers)
+ },
+    getName(value){
+      this.responds = value  
  }
 },
 
@@ -48,9 +52,7 @@ color: white;
 transition: 0.7s;
 border-radius: 2px;
 }
-.hearts {
-color: red;
-}
+
 .meaningLabel {
 color: aliceblue;
 background-color: hsla(160, 100%, 37%, 0.2);

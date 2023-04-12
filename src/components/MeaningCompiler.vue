@@ -18,7 +18,8 @@
 
   export default {
     emits: {
-        responseClicked: null
+        responseClicked: null,
+        answer: null
     },
     components: {
       ButtonCompiler
@@ -39,6 +40,7 @@
       setRName(name) {
             this.clickedResponse=name
             this.$emit("responseClicked", this.clickedResponse);
+            this.$emit('answer', this.answers)
         },
     getClick(value) {
       this.clickedName = value

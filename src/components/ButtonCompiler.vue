@@ -12,7 +12,6 @@
   </div>
   <div v-if="meaningHover" class="tlab">{{ currentHoverMeaning }}</div>
   <div v-if="meaningClick" class="tlab">{{ currentClickedMeaning }}</div>
-  
 </template>
 
 <script>
@@ -81,7 +80,7 @@ export default {
 }
 .button1:hover {
   background-color: hsla(160, 100%, 37%, 1);
-  color: white;
+  color: black;
   transition: 0.7s;
   border-radius: 12px;
 }
